@@ -1,0 +1,39 @@
+<h1>Welcome To The Printer Shack</h1>
+
+<h3>
+
+<p>The One Stop shop for your printer and accessories.
+ </h3>
+<h4>
+  <p>
+    Buy New and Used, Laser and Inkjet Printers. Repairs on HP, Lexmark, Canon, Brother and most major brands.
+
+    Printer Repairs, Printer Shack has over 10 years experience in printer repair and small office machine repair. We also carry older hard to find printers, supplies and accessories for home owners and small business owners. We do not charge a diagnostic fee because we feel that if we cannot fix your printer, why should you have to pay.
+   <p>
+    Printer Brands We Repair: Hewlett-Packard®   Brother® Lexmark®  Canon®  Dell®Epson™  and Most Major Brands
+
+   <p>
+    Printer Sales
+    Save money when you purchase refurbished printers, printer supplies and accessories at The Printer Shack in County Longford.  The Printer Shop has many affordable Laser Jet, Ink Jet, Dot Matrix and Photo printers to choose from.
+   <p>
+   We replace all worn items and clean each printer to make sure that each one works like the day it was taken out of the box.  We offer a disk with your printer manual and drivers that you will need to install your printer without the help of a specialist.
+   <p>
+   We also have free delivery Longford and surrounding areas.
+
+
+</p>
+</h4>
+
+        |<%= link_to "Home", :controller => "welcome", :action => "home" %> |
+        <%= link_to "Product Catalogue", products_path %> |
+        <%= link_to "Register", :controller => "welcome", :action => "register" %> |
+        <%= link_to "Login", login_path %>|
+        <%= link_to "Logout", logout_path %> |
+        <%= link_to "Your Cart", :controller => "carts", :action => "your_cart" %> |
+        <%= link_to "Leave Site", :controller => "welcome", :action => "thank_you" %> |
+        <%= link_to "Contact", :controller => "welcome", :action => "contact" %> |
+
+
+<div id="footer">
+&copy; 2011 Printer Shack. Designed by Torsby Attipoe 
+</div>

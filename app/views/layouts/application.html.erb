@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PrinterShack | <%= @title %></title>
+    <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+</head>
+<body>
+
+<div class="container">
+    <header>
+    <%= image_tag("logo.png", :alt => "Sample App", :class => "round") %>
+
+    </header>
+    <section class="round">
+
+      | <%= link_to "Home", :controller => "welcome", :action => "home" %> |
+        <%= link_to "Product Catalogue", products_path %> |
+        <%= link_to "Register", :controller => "welcome", :action => "register" %> |
+        <%= link_to "Login", login_path %>|
+        <%= link_to "Logout", logout_path %> |
+        <%= link_to "Your Cart", :controller => "carts", :action => "your_cart" %> |
+        <%= link_to "Leave Site", :controller => "welcome", :action => "thank_you" %> |
+        <%= link_to "Contact", :controller => "welcome", :action => "contact" %> |
+
+
+
+<div id='header'>
+    <% if logged_in? %>
+        <%= "Logged in as"%> <%= current_user.email %> |
+        <%= link_to 'Logout', logout_path %> |
+        <%= link_to "Create User", new_user_path %> |
+    <% else %>
+
+<% end %>
+
+
+
+</div>
+        <%= yield %>
+    </section>
+</div>
+
+</body>
+</html>
+

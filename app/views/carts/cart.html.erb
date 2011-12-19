@@ -1,0 +1,29 @@
+<% if flash[:cart_notice] %>
+<%= render :partial => "cart/cart_notice" %>
+<% end %>
+
+<h3>Your Shopping Cart</h3>
+
+<ul>
+<% for item in @cart.cart_items %>
+<li id="cart_item_<%= item.book.id %>">
+<%= render :partial => "cart/item", :object => item %>
+</li>
+<% end %>
+</ul>
+<p id="cart_total"><strong>Total: $<%= sprintf("%0.2f", @cart.total) %> ➥
+</strong></p>
+
+        |<%= link_to "Home", :controller => "welcome", :action => "home" %> |
+        <%= link_to "Product Catalogue", products_path %> |
+        <%= link_to "Register", :controller => "welcome", :action => "register" %> |
+        <%= link_to "Login", login_path %>|
+        <%= link_to "Logout", logout_path %> |
+        <%= link_to "Your Cart", :controller => "carts", :action => "your_cart" %> |
+        <%= link_to "Leave Site", :controller => "welcome", :action => "thank_you" %> |
+        <%= link_to "Contact", :controller => "welcome", :action => "contact" %> |
+
+<div id="footer">
+&copy; 2011 Printer Shack. Designed by Torsby Attipoe - Phone: 0868407106, Email: info@it247.ie, www.it247.ie
+</div>
+

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<% if flash[:cart_notice] %>
+    <%= render :partial => "cart/cart_notice" %>
+<% end %>
+
+        <h2>Your Shopping Cart</h2>
+
+<p>
+        <strong>
+        <%= link_to "Proceed to Checkout", :controller => 'checkout' unless controller.controller_name == 'checkout' %>
+        </strong>
+</p>
+<ul>
+    <% for item in @cart.line_items %>
+        <li><%= item.quantity %> &times; <%= item.product.manufacturer %>     <%= item.product.price %>
+
+        </li>
+
+        <% end %> <br>
+        Total Price: <%= number_to_currency(@cart.total_price, :unit => '&euro;') %><br/>
+        <br/>
+        <%= button_to 'Empty cart', @cart, :method => :delete, :confirm =>'Are you sure?' %>
+</ul>
+
+        |<%= link_to "Home", :controller => "welcome", :action => "home" %> |
+        <%= link_to "Product Catalogue", products_path %> |
+        <%= link_to "Register", :controller => "welcome", :action => "register" %> |
+        <%= link_to "Login", login_path %>|
+        <%= link_to "Logout", logout_path %> |
+        <%= link_to "Your Cart", :controller => "carts", :action => "your_cart" %> |
+        <%= link_to "Leave Site", :controller => "welcome", :action => "thank_you" %> |
+        <%= link_to "Contact", :controller => "welcome", :action => "contact" %> |
+
+

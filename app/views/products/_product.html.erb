@@ -1,0 +1,18 @@
+<ul id="products">
+<% for product in @products %>
+<li class="product" id="product_<%= product.id %>">
+<dl>
+<dt><%= link_to product.title.t, :action => "show", :id => product %></dt>
+
+<dd>Price: $<%= sprintf("%.2f", product.price) %></dd>
+
+<strong>
+<%= add_product_link("+", product) %>
+</strong>
+</dd>
+</dl>
+</li>
+<%= draggable_element("product_#{product.id}", :revert => true) %>
+<% end %>
+</ul>
+

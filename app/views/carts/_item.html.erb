@@ -1,0 +1,7 @@
+<%= link_to item.cart, :action => "show",
+:controller => "products", :id => item.manufacturer %>
+<%= pluralize(item.amount, "pc", "pcs") %>,
+$<%= sprintf("%0.2f", item.price * item.amount) %>
+
+(<%= remove_cart_link("-", item.cart) %>)
+

@@ -1,0 +1,34 @@
+<h1>Register</h1>
+ <div class="field">
+   <%= label_tag :email %><br />
+   <%= text_field_tag :email %>
+ <br />
+   <%= label_tag :password %><br />
+   <%= password_field_tag :password %>
+ <div class="actions">
+        <input name="commit" type="submit" value="Register" />
+  </div>
+ </div>
+
+        |<%= link_to "Home", :controller => "welcome", :action => "home" %> |
+        <%= link_to "Product Catalogue", products_path %> |
+        <%= link_to "Register", :controller => "welcome", :action => "register" %> |
+        <%= link_to "Login", login_path %>|
+        <%= link_to "Logout", logout_path %> |
+        <%= link_to "Your Cart", :controller => "carts", :action => "your_cart" %> |
+        <%= link_to "Leave Site", :controller => "welcome", :action => "thank_you" %> |
+        <%= link_to "Contact", :controller => "welcome", :action => "contact" %> |
+
+
+<div id="footer">
+&copy; 2011 Printer Shack. Designed by Torsby Attipoe - Phone: 0868407106, Email: info@it247.ie,
+  <a href="http://www.IT247.ie/">Visit www.IT247.ie</a>
+</div>
+
+<!-- 12 --><div class="auto-style2"><a href="http://www.facebook.com/">
+			<img alt="Facebook" class="auto-style3" height="33" src="images/Facebook.jpg" width="155" />
+
+</a><a href="http://www.myspace.com"><img alt="myspace" class="auto-style3" height="33" src="images/myspace.jpg" width="155" />
+
+</a><a href="http://twitter.com/"><img alt="twitter" class="auto-style3" height="33" src="images/twitter.jpg" width="155" /></a></div>
+

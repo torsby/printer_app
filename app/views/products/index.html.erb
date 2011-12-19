@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+<h1>Listing products</h1>
+
+
+<table>
+  <tr>
+    <th>Manufacturer</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Image</th>
+    <th>Features</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.manufacturer %></td>
+    <td><%= product.description %></td>
+    <td><%= product.price %></td>
+    <td><%= show_image (product) %></td>
+    <td><%= product.features %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= button_to 'Add to Cart', line_items_path(:product_id => product) %></td>
+  </tr>
+<% end %>
+</table>
+<% form_tag products_path, :method => 'get' do %>
+   <p>
+<%= text_field_tag :search_query, params[:search_query] %>
+     <%= submit_tag "Search", :name => nil %>
+   </p>
+
+<% end %>
+
+<br />
+
+        <%=link_to "Login Now", login_path%>
+|       <%= link_to "Home", :controller => "welcome", :action => "home" %> |
+        <%= link_to "Product Catalogue", products_path %> |
+        <%= link_to "Register", :controller => "welcome", :action => "register" %> |
+        <%= link_to "Login", login_path %>|
+        <%= link_to "Logout", logout_path %> |
+        <%= link_to "Your Cart", :controller => "carts", :action => "your_cart" %> |
+        <%= link_to "Leave Site", :controller => "welcome", :action => "thank_you" %> |
+        <%= link_to "Contact", :controller => "welcome", :action => "contact" %> |
+
+<div id="footer">
+&copy; 2011 Printer Shack. Designed by Torsby Attipoe - Phone: 0868407106, Email: info@it247.ie,
+  <a href="http://www.IT247.ie/">Visit www.IT247.ie</a>
+</div>

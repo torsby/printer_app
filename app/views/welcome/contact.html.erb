@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Printer Shack | <%= @title %></title>
+</head>
+<body>
+<h1>Contact Us</h1>
+<p>
+
+  <p>
+     <h3>Phone: 0868407106</h3>
+    <p>
+    <h3>Email: info@IT247.ie</h3>
+    <p>
+
+    Send Email:
+  <p>
+
+<table>
+
+  <tr>
+  <td class="label">Your Name:</td>
+  <td><%= text_field_tag "name" %></td>    </tr>
+  <tr>        <td class="label">Your E-mail:</td>
+  <td><%= text_field_tag "email" %></td>    </tr>
+  <tr valign="top">
+    <td class="label">Your Message:</td>
+    <td><%= text_area_tag "message" %></td>
+  </tr>
+  <tr>
+    <td></td>        <td><%= submit_tag(" SEND ") %></td>
+
+  </tr>
+</table>
+
+   <p>
+    <h3>Locate Us @: Main Street, Edgeworthstown, Co Longford, Ireland.</h3>
+    <p>
+
+     <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+     src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Main+Street,+Edgeworthstown,
+     +Longford,+Ireland&amp;aq=1&amp;sll=53.696613,-7.609645&amp;sspn=0.011002,0.0421&amp;ie=UTF8&amp;hq=&amp;
+     hnear=Main+St,+Edgeworthstown,+County+Longford,+Ireland&amp;ll=53.696605,-7.609663&amp;spn=0.011002,0.0421&amp;
+     z=14&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;
+     geocode=&amp;q=Main+Street,+Edgeworthstown,+Longford,+Ireland&amp;aq=1&amp;sll=53.696613,-7.609645&amp;
+     sspn=0.011002,0.0421&amp;ie=UTF8&amp;hq=&amp;hnear=Main+St,+Edgeworthstown,+County+Longford,+Ireland&amp;
+     ll=53.696605,-7.609663&amp;spn=0.011002,0.0421&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+
+
+
+
+</p>
+</body>
+
+
+
+
+</html>
+
+
+       |<%= link_to "Home", :controller => "welcome", :action => "home" %> |
+        <%= link_to "Product Catalogue", products_path %> |
+        <%= link_to "Register", :controller => "welcome", :action => "register" %> |
+        <%= link_to "Login", login_path %>|
+        <%= link_to "Logout", logout_path %> |
+        <%= link_to "Your Cart", :controller => "carts", :action => "your_cart" %> |
+        <%= link_to "Leave Site", :controller => "welcome", :action => "thank_you" %> |
+        <%= link_to "Contact", :controller => "welcome", :action => "contact" %> |
+
+
+<div id="footer">
+&copy; 2011 Printer Shack. Designed by Torsby Attipoe - Phone: 0868407106, Email: info@it247.ie,
+  <a href="http://www.IT247.ie/">Visit www.IT247.ie</a>
+</div>
+
